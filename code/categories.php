@@ -23,7 +23,7 @@
     <a href="index.html">
         <img src="./box.png" alt="Фото коробки" id="box">
     </a>
-    <div class="text_category"><h1>Додати нову категорію</h1></div>
+    <div class="text_newcategory"><h1>Додати нову категорію</h1></div>
     <div class="text_allcategory"><h1>Список всіх категорій</h1></div>
     <div class="add_category">
     <?php

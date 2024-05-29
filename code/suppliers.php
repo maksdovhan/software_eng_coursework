@@ -22,7 +22,8 @@
     <a href="task.html" class="oval-button task">Завдання</a>
     <a href="about.html" class="oval-button about">Про сайт</a>
 
-    <div class="text_category"><h1>Додати нового постачальника</h1></div>
+    <div class='text_allsuppliers'><h1>Список всіх постачальників</h1></div>
+    <div class="text_newcategory"><h1>Додати нового постачальника</h1></div>
     <div class="add_category">
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <label for="name">Ім'я:</label>
@@ -86,7 +87,6 @@
 
     if (count($all_suppliers) > 0) {
         echo "<div class='all-suppliers'>";
-        echo "<div class='text_allsuppliers'><h1>Список всіх постачальників</h1></div>";
         echo "<form method='post' action='" . htmlspecialchars($_SERVER["PHP_SELF"]) . "'>";
         foreach ($all_suppliers as $supplier) {
             echo "<class='supplier-item'>";
@@ -135,7 +135,7 @@
         // Перевірка формату номера телефону
         $phonePattern = "/^\+380\d{9}$/";
         if (!preg_match($phonePattern, $phone)) {
-            echo "<div class='error-message-suppliers'>Введіть номер у форматі +380XXXXXXXXX.</div>";
+            echo "<div class='error-message-suppliers'>Введіть номер у форматі +380XXXXXXXXX!</div>";
         } else {
             // Перевірка, чи введені всі необхідні дані
             if (!empty($name) && !empty($surname) && !empty($address)) {

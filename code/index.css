@@ -8,16 +8,15 @@ img {
 }
 
 .title, .podtitle {
+    position: fixed;
     width: 100%;
-    padding-left: 4%;
-    text-align: left;
+    padding-left: 80px;
     color: #f5f5f5;
     background-color: rgb(30, 30, 30);
     z-index: 10;
 }
 
 .title {
-    top: 0px;
     font-size: 32px;
     font-weight: bold;
 }
@@ -25,7 +24,7 @@ img {
 .podtitle {
     font-size: 16px;
     background-size: 120%;
-    top: 37px;
+    top: 35px;
 }
 
 #box {
@@ -39,7 +38,7 @@ img {
 
 .oval-button {
     padding: 8px 8px;
-    border-radius: 20px;
+    border-radius: 30px;
     background-color: #da7b10;
     transition: background-color 0.5s ease;
 }
@@ -61,31 +60,31 @@ img {
 }
 
 .to_main {
-    right: 660px;
+    right: 670px;
 }
 
 .categories {
-    right: 560px;
+    right: 570px;
 }
 
 .goods {
-    right: 470px;
+    right: 480px;
 }
 
 .suppliers {
-    right: 325px;
+    right: 330px;
 }
 
 .search {
-    right: 240px;
+    right: 245px;
 }
 
 .task {
-    right: 135px;
+    right: 140px;
 }
 
 .about {
-    right: 35px;
+    right: 40px;
 }
 
 .index_centered, .task_centered, .about_centered {
@@ -99,18 +98,12 @@ img {
 
 .index_centered {
     top: 515px;
-    transform: translate(-50%, -50%);
     max-width: 825px;
     padding: 20px 40px;
 }
 
 .about_centered {
-    position: absolute;
-    font-size: 20px;
-    background-color: white;
-    top: 53%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 510px;
     text-align: center;
     max-width: 100%;
     padding: 20px 40px;
@@ -120,7 +113,8 @@ img {
     line-height: 1.5;
 }
 
-.text_category, .text_allcategory, .text_allgoods, .text_allsuppliers {
+.text_newcategory, .text_newproduct, .text_allcategory, .text_allgoods,
+.text_allsuppliers, .text_search, .text_allsearch {
     position: fixed;
     font-family: 'Segoe UI';
     font-size: 9px;
@@ -128,31 +122,46 @@ img {
     border-radius: 30px;
     border: 2px solid #585858;
     background-color: #ff5e00;
-    top: 80px;
-    left: 50%;
+    top: 75px;
+    left: 20%;
     transform: translate(-50%);
 }
 
+.text_newcategory {
+    left: 50%;
+}
+
 .text_allgoods {
-    top: 75px;
-    left: 40%;
+    left: 50%;
 }
 
 .text_allsuppliers {
-    top: 75px;
     left: 200px;
+}
+
+.text_search {
+    left: 950px;
+}
+
+.text_allcategory {
+    left: 200px;
+}
+
+.text_allsearch {
+    left: 275px;
 }
 
 .add_category, .add_goods, .add_products {
     position: absolute;
     border: 2px solid #aaaaaa;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255);
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     top: 325px;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow-y: auto;
 }
 
 .add_products {
@@ -173,8 +182,8 @@ img {
     left: 50%;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0);
+    background-color: rgba(255, 255, 255);
 }
 
 .add_category label, .add_products label {
@@ -213,7 +222,7 @@ img {
     cursor: pointer;
 }
 
-.add_category input[type="submit"]:hover {
+.add_category input[type="submit"]:hover, .add_products input[type="submit"]:hover{
     background-color: #ff5e00;
 }
 
@@ -262,9 +271,8 @@ img {
 .category-list, .category-products {
     position: fixed;
     top: -75px;
-    right: 950px;
-    transform: translate(50%);
-    background-color: rgba(255, 255, 255, 0.75);
+    right: 750px;
+    background-color: rgba(255, 255, 255);
     padding: 15px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -352,11 +360,11 @@ img {
     background-color: #3e8e41;
 }
 
-.all-products, .all-suppliers {
+.all-products, .all-suppliers, .all-search {
     position: fixed;
     top: 175px;
     left: 50px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255);
     padding: 15px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -368,6 +376,19 @@ img {
 .all-products {
     top: 160px;
     max-height: 725px;
+}
+
+.all-search {
+    position: absolute;
+    border: 2px solid #aaaaaa;
+    background-color: rgba(255, 255, 255);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    top: 200px;
+
+    width: 400px;
+    max-height: 500px;
 }
 
 .choose-category {
@@ -386,8 +407,8 @@ img {
     font-size: 16px;
 }
 
-.add_category input[type="text"], .add_category input[type="number"],
-.add_products input[type="text"], .add_products input[type="number"] {
+.add_category input[type="text"], .add_products input[type="text"],
+.add_category input[type="number"], .add_products input[type="number"] {
     display: block; /* Додано, щоб кожне поле було на новому рядку */
     font-size: 20px;
     border-radius: 30px; /* Заокруглені кути */

@@ -22,8 +22,8 @@
     <a href="task.html" class="oval-button task">Завдання</a>
     <a href="about.html" class="oval-button about">Про сайт</a>
 
-    <div class="text_category"><h1>Додати новий товар</h1></div>
-    <div class="text_allgoods"><h1>Список усіх товарів</h1></div>
+    <div class="text_newproduct"><h1>Список усіх товарів</h1></div>
+    <div class="text_allgoods"><h1>Додати новий товар</h1></div>
     <div class="add_products">
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <label for="category">Категорія:</label>
