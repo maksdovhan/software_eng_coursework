@@ -4,7 +4,7 @@ body {
 }
 
 img {
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 .title, .podtitle {
@@ -127,24 +127,34 @@ img {
     transform: translate(-50%);
 }
 
+.text_search {
+    top: 300px;
+}
+
+.text_allsearch {
+    top: 100px;
+}
+
 .text_newcategory {
+    top: 200px;
     left: 50%;
+}
+
+.text_newproduct {
+    left: 14%;
 }
 
 .text_allgoods {
+    top: 160px;
     left: 50%;
 }
 
-.text_allsuppliers {
+.text_allsuppliers, .text_allcategory {
     left: 200px;
 }
 
 .text_search {
     left: 950px;
-}
-
-.text_allcategory {
-    left: 200px;
 }
 
 .text_allsearch {
@@ -165,11 +175,11 @@ img {
 }
 
 .add_products {
-    top: 475px;
+    top: 560px;
 }
 
 .add_category {
-    top: 400px;
+    top: 525px;
 }
 
 .add_goods {
@@ -226,7 +236,8 @@ img {
     background-color: #ff5e00;
 }
 
-.success-message-category, .success-message-products, .success-message-suppliers {
+.success-message-category, .success-message-products, .success-message-suppliers,
+.error-message-category, .error-message-products, .error-message-suppliers, .error-message-search {
     position: absolute;
     font-family: 'Segoe UI';
     font-size: 16px;
@@ -234,8 +245,24 @@ img {
     border-radius: 20px;
     border: 2px solid #585858;
     background-color: #27e00f;
-    top: 78%;
-    right: 165px;
+    top: 635px;
+    left: 46.5%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.error-message-search {
+    top: 585px;
+    left: 46%;
+}
+
+.error-message-category, .error-message-products,
+.error-message-suppliers, .error-message-search {
+    background-color: #ff0000;
+}
+
+.error-message-category {
+    left: 45.5%;
 }
 
 .success-message-products {
@@ -248,30 +275,18 @@ img {
     right: 875px;
 }
 
-.error-message-category, .error-message-products, .error-message-suppliers {
-    position: absolute;
-    font-family: 'Segoe UI';
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 2px solid #585858;
-    background-color: #ff0000;
-    top: 78%;
-    right: 200px;
-}
-
 .error-message-suppliers {
     top: 500px;
 }
 
 .text_allcategory {
-    left: 12%;
+    left: 13%;
 }
 
 .category-list, .category-products {
     position: fixed;
-    top: -75px;
-    right: 750px;
+    top: 170px;
+    right: 77%;
     background-color: rgba(255, 255, 255);
     padding: 15px;
     border-radius: 15px;
@@ -286,13 +301,24 @@ img {
     right: 890px;
 }
 
-.category-item {
+.category-item, .product {
+    border-radius: 15px;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 3px solid #999999;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px;
+    margin: 17px;
     width: 300px;
+}
+
+.edit_name, .edit_category {
+    border: 2px solid #ddd;
+    border-radius: 7px;
+}
+
+.edit_category_name {
+    max-height: 30px;
+
 }
 
 .delete-button, .edit-button, .delete-category, .sort-products, .sort-brand, .sort-money,
@@ -376,6 +402,9 @@ img {
 .all-products {
     top: 160px;
     max-height: 725px;
+    max-width: 400px;
+    border-radius: 30px;
+    border: 2px solid #585858;
 }
 
 .all-search {
@@ -386,13 +415,12 @@ img {
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     top: 200px;
-
     width: 400px;
     max-height: 500px;
 }
 
 .choose-category {
-    display: block; /* Додано, щоб кожне поле було на новому рядку */
+    display: block;
     border-radius: 15px;
     padding: 5px;
     font-size: 16px;
@@ -400,21 +428,40 @@ img {
 }
 
 .edit-input, .edit-brand, .edit-quantity, .edit-description, .edit-price {
-    /* styles for the input field */
-    display: block; /* Додано, щоб кожне поле було на новому рядку */
+    display: block;
     border-radius: 10px;
     padding: 5px;
     font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
 }
 
 .add_category input[type="text"], .add_products input[type="text"],
 .add_category input[type="number"], .add_products input[type="number"] {
-    display: block; /* Додано, щоб кожне поле було на новому рядку */
+    display: block;
     font-size: 20px;
-    border-radius: 30px; /* Заокруглені кути */
+    border-radius: 30px;
     box-sizing: border-box;
     border: 2px solid #aaaaaa;
     padding: 12px;
     height: 40px;
     width: 100%;
+}
+
+.input-large {
+    width: 95%;
+    height: 35px;
+    border-radius: 15px;
+    border: 2px solid #aaaaaa;
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.textarea-large {
+    width: 95%;
+    height: 70px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 2px solid #aaaaaa;
+    font-family:'Times New Roman', Times, serif;
+    resize: none;
 }

@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiySklad</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="./box.png">
+    <link rel="icon" href="../images/box.png">
 </head>
 <body>
     <div class="title">MiySklad: електронний облік товарів</div>
     <div class="podtitle">Курсова робота студента групи ІО-24 Довганя Максима</div>
-    <img src="./bg photo.jpg">
-    <a href="index.html">
-        <img src="./box.png" alt="Фото коробки" id="box">
-    </a>
+    <img src="../images/background.jpg">
+    <a href="index.html"> <img src="../images/box.png" alt="Фото коробки" id="box"/></a>
+    <a href="index.html" class="oval-button to_main">На головну</a>
     <a href="index.html" class="oval-button to_main">На головну</a>
     <a href="categories.php" class="oval-button categories">Категорії</a>
     <a href="products.php" class="oval-button goods">Товари</a>
@@ -22,8 +21,8 @@
     <a href="task.html" class="oval-button task">Завдання</a>
     <a href="about.html" class="oval-button about">Про сайт</a>
 
-    <div class="text_newproduct"><h1>Список усіх товарів</h1></div>
-    <div class="text_allgoods"><h1>Додати новий товар</h1></div>
+    <div class="text_category"><h1>Додати новий товар</h1></div>
+    <div class="text_allgoods"><h1>Список усіх товарів</h1></div>
     <div class="add_products">
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <label for="category">Категорія:</label>
@@ -192,7 +191,7 @@
             echo "<form method='post' action='" . htmlspecialchars($_SERVER["PHP_SELF"]) . "'>";
             echo "<input type='hidden' name='product_id' value='" . $product['id'] . "'>";
             echo "<input type='hidden' name='delete_product' value='true'>";
-            echo "<input type='image' src='trash.png' alt='Видалити' class='delete-category'>";
+            echo "<input type='image' src='../images/trash.png' alt='Видалити' class='delete-category'>";
             echo "</form>";
             echo "<form method='post' action='" . htmlspecialchars($_SERVER["PHP_SELF"]) . "'>";
             echo "<input type='hidden' name='product_id' value='" . $product['id'] . "'>";
@@ -202,20 +201,20 @@
             echo "<input type='number' name='edit_quantity' required class='edit-quantity' value='" . $product['quantity'] . "' min='0' required>";
             echo "<input type='number' name='edit_price' required class='edit-price' value='" . $product['price'] . "' min='0' step='0.01' required>";
             echo "<input type='hidden' name='edit_product' value='true'>";
-            echo "<input type='image' src='edit.png' alt='Редагувати' class='edit-button'>";
+            echo "<input type='image' src='../images/edit.png' alt='Редагувати' class='edit-button'>";
             echo "</form>";
             echo "<input type='hidden' name='sort_product' value='true'>";
-            echo "<input type='image' src='sort.png' alt='Сортувати по назві' class='sort-products'>";
+            echo "<input type='image' src='../images/sort.png' alt='Сортувати по назві' class='sort-products'>";
             echo "</form>";
 
 
-            echo "<input type='hidden' name='sort_brand' value='true'>";
-            echo "<input type='image' src='brand.png' alt='Сортувати по бренду' class='sort-brand'>";
+            echo "<input type='hidden' name='brand' value='true'>";
+            echo "<input type='image' src='../images/brand.png' alt='Сортувати по бренду' class='sort-brand'>";
             echo "</form>";
 
 
             echo "<input type='hidden' name='sort_money' value='true'>";
-            echo "<input type='image' src='money.png' alt='Сортувати по ціні' class='sort-money'>";
+            echo "<input type='image' src='../images/money.png' alt='Сортувати по ціні' class='sort-money'>";
             echo "</form>";
         }
         echo "</div>";
